@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mohamad Nweder</title>
+  <style>
+    .button {
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      color: white;
+    }
+
+    .black-button {
+      background-color: black;
+    }
+
+    .white-button {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+    }
+
+    .github-button {
+      background-color: #333;  
+      color: white;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    .light-mode {
+      background-color: white;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to my site!</h1>
+  <h2>I'm a Web Developer</h2>
+
+  <hr />
+  <h3><a href="./public/movie-ranking.html" class="button black-button">My Projects</a></h3>
+
+  <h3><a href="./public/birthday-invite.html" class="button white-button">Birthday Invite Project</a></h3>
+  <hr />
+  <img src="./assets/images/programing_pic.png" width="300" height="100" />
+  <hr />
+  <a href="./public/about.html" class="button black-button">About Me</a>
+  <a href="./public/contact.html" class="button white-button">Contact Me</a>
+
+  <!-- Knapp för att växla tema -->
+  <button onclick="toggleTheme()" class="button">Toggle Theme</button>
+
+  <!-- GitHub-knapp -->
+  <a href="https://github.com/Nweder" class="button github-button">Visit My GitHub</a>
+
+  <script>
+    function toggleTheme() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+    }
+  </script>
+</body>
+
+</html>
