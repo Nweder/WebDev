@@ -22,7 +22,7 @@
             color: #333;
             text-align: center;
         }
-        form {
+        form, .contact-info {
             display: flex;
             flex-direction: column;
         }
@@ -32,19 +32,27 @@
             border-radius: 5px;
             border: 1px solid #ccc;
         }
-        input[type="submit"] {
-            background-color: #4CAF50;
+        .back-button {
+            background-color: #493581;
             color: white;
             border: none;
             cursor: pointer;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 20px; /* Lägg till marginal för att separera från containers */
             transition: background-color 0.3s;
         }
-        input[type="submit"]:hover {
+        .back-button:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
+    <a href="/" class="back-button">Back to Home</a> <!-- Tillbakaknappen ovanför allt innehåll -->
+
     <div class="container">
         <h1>Let us contact you!</h1>
         <form action="#" method="post">
@@ -53,20 +61,13 @@
             <textarea id="message" name="message" placeholder="Message" rows="4"></textarea>
             <input type="submit" value="Send Message">
         </form>
-    </div>      
-    </p>
-</body>
-<body>
-  <div class="container">
-      <h1>Get touch with US Now!</h1>
-      <p>Tel: +47 399 888 30</p>
-      <p><a href="mailto:m.neweder@gmail.com">Send email</a></p>
-      <!-- <p>Address:</p>
-      <p> -->
-          <!-- Teglegatan 16<br>
-          Göta<br>
-          Sweden <br> -->
-      </p>
-  </div>
+    </div>
+    <div class="container">
+        <h1>Get in touch with us now!</h1>
+        <div class="contact-info">
+            <p>Tel: +47 399 888 30</p>
+            <p><a href="mailto:m.neweder@gmail.com">Send email</a></p>
+        </div>
+    </div>
 </body>
 </html>
