@@ -5,44 +5,54 @@
     <title>Contact Me</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 20px;
-            background-color: #333; /* Mörk bakgrund */
-            color: #ccc; /* Ljus textfärg */
-        }
-        h1 {
-            color: #fff; /* Vit rubrikfärg */
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        a {
-            color: #4a8adb; /* Blå länkfärg */
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
         }
         .container {
+            background: #b6a5a5;
+            width: 80%;
             max-width: 600px;
-            margin: auto;
-            background: #444; /* Mörkgrå containerbakgrund */
+            margin: 20px auto;
             padding: 20px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Starkare skugga för mer djup */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Contact Me</h1>
-        <p>Address<br>
-            Teglegatan 16<br>
-            Göta<br>
-            Sweden <br>
-        Tel: +47 399 888 30<br>
-        <a href="mailto:m.neweder@gmail.com">Send email</a>
-        </p>
+        <h1>Contact me</h1>
+        <form action="#" method="post">
+            <input type="text" id="name" name="name" placeholder="Name">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <textarea id="message" name="message" placeholder="Message" rows="4"></textarea>
+            <input type="submit" value="Send Message">
+        </form>
     </div>
 </body>
 </html>
