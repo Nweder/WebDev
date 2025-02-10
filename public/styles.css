@@ -55,3 +55,23 @@ opacity: 0.9;
 .left   { transform: rotateY(-90deg) translateZ(50px); }
 .top    { transform: rotateX(90deg) translateZ(50px); }
 .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+.back-button-for-fun {
+    background-color: #5a80d6; 
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none; 
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    position: fixed; 
+    top: 20px;
+    left: 20px;
+    border: none;
+}
+
+.back-button-for-fun:hover {
+    background-color: #4b6bbf; 
+}

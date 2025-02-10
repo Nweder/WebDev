@@ -189,5 +189,107 @@ body {
     .back-button:hover, .back-button-about-me:hover {
         background-color: #4b6bbf;
     }
+    .back-button-about-me {
+        background-color: #5a80d6;
+        color: white;
+        padding: 1px 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        text-decoration: none; 
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        position: absolute; 
+        top: 20px; 
+        left: 20px; 
+        border: none;
+    }
+    
+    .back-button-about-me:hover{
+        background-color: #4b6bbf; 
+    }
+    .back-button-for-fun {
+        background-color: #5a80d6; 
+        color: white;
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        text-decoration: none; 
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        position: fixed; 
+        top: 20px;
+        left: 20px;
+        border: none;
+    }
+
+    .back-button-for-fun:hover {
+        background-color: #4b6bbf; 
+    }
+    .back-button-my-projects {
+        background-color: #5a80d6; 
+        color: white;
+        padding: 1px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        text-decoration: none; 
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        position: fixed; 
+        top: 20px;
+        left: 20px;
+        border: none;
+    }
+
+    .back-button-my-projects:hover {
+        background-color: #4b6bbf; 
+    }
+    .back-button-birthday {
+        background-color: #5a80d6; 
+        color: white;
+        padding: 1px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        text-decoration: none; 
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        position: fixed; 
+        top: 20px;
+        left: 20px;
+        border: none;
+    }
+
+    .back-button-birthday:hover {
+        background-color: #4b6bbf; 
+    }
+    
+    #userEmail {
+        padding: 10px;
+        font-size: 16px;
+        width: 250px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    #sendMailButton {
+        background-color: #5a80d6;
+        color: white;
+        padding: 10px 10px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #sendMailButton:hover {
+        background-color: #4b6bbf;
+    }
+    
+    
+    
+    
+
     
     
