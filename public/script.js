@@ -18,13 +18,35 @@ document.getElementById("back-button-my-projects").addEventListener("click", fun
     window.location.href = "../index.html"; 
 });
 
-document.getElementById("sendMailButton").addEventListener("click", function() {
-    let UserEmail = document.getElementById("UserEmail").value;
-    if (UserEmail.trim() === "") {
-        alert("Please enter your email before sending.");
+document.getElementById("sendMailButton").addEventListener("click", async function() {
+    let userEmail = document.getElementById("userEmail").value;
+    let messageElement = document.getElementById("message");
+
+    if (userEmail.trim() === "") {
+        messageElement.textContent = "Please enter your email before sending.";
+        messageElement.style.color = "red";
         return;
     }
-    let subject = "Request to See Your CV";
-    let body = `Hello, I am ${UserEmail}. I would like to see your CV.`;
-    window.location.href = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    try {
+        let response = await fetch("http://localhost:5000/api/email/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ userEmail })
+        });
+
+        let result = await response.json();
+
+        if (response.ok) {
+            messageElement.textContent = "Email sent successfully!";
+            messageElement.style.color = "green";
+        } else {
+            messageElement.textContent = "Failed to send email. Please try again.";
+            messageElement.style.color = "red";
+        }
+    } catch (error) {
+        messageElement.textContent = "Error connecting to server.";
+        messageElement.style.color = "red";
+        console.error("Error:", error);
+    }
 });
+
