@@ -5,3 +5,7 @@ document.getElementById("sendMailButton").addEventListener("click", function() {
 document.getElementById("backHomeButton").addEventListener("click", function() {
     window.location.href = "../index.html"; 
 });
+
+document.getElementById("back-button-about-me").addEventListener("click", function() {
+    window.location.href = "../index.html"; 
+});
