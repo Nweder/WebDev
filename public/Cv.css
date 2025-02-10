@@ -57,3 +57,29 @@ footer {
     background: #48858e;
     color: white;
 }
+.back-button-about-me {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background: #48858e;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out;
+    z-index: 1; 
+}
+
+.back-button-about-me:hover {
+    background: #1b3f48;
+}
+
+
+.back-button-about-me:hover {
+    background: #1b3f48; 
+}
