@@ -25,11 +25,18 @@ document.getElementById("back-button-my-projects").addEventListener("click", fun
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("http://localhost:5000/api/projects")
+    fetch("http://localhost:5215/api/projects")  
         .then(response => response.json())
         .then(data => {
+            console.log("Fetched projects:", data);
             const projectContainer = document.getElementById("projects-list");
-            projectContainer.innerHTML = ""; 
+
+            if (!projectContainer) {
+                console.error("Error: 'projects-list' div not found in index.html!");
+                return;
+            }
+
+            projectContainer.innerHTML = "";
 
             data.forEach(project => {
                 projectContainer.innerHTML += `
@@ -43,4 +50,5 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error fetching projects:", error));
 });
+
 
