@@ -3,66 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>For Fun - 3D Cube</title>
-    <link rel="stylesheet" href="styles.css"> 
-    <style>
-        body {
-            display: flex;
-            justify-content: column;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            background: #e7dede;
-            perspective: 1000px;
-            overflow:hide; 
-        }
-        h1, p {
-            margin-bottom: 20px; 
-            text-align: center;
-        }
-
-        @keyframes jump-and-move {
-        0%, 100% {
-            transform: translate(0, 0) rotateX(0) rotateY(0);
-            background-color: red;
-        }
-        25% {
-            transform: translate(50vw, 0) rotateX(360deg) rotateY(0);
-            background-color: blue;
-        }
-        50% {
-            transform: translate(50vw, 50vh) rotateX(360deg) rotateY(360deg);
-            background-color: green;
-        }
-        75% {
-            transform: translate(0, 50vh) rotateX(0) rotateY(360deg);
-            background-color: purple;
-        }
-        }
-
-        .cube {
-        position: relative;
-        width: 100px;
-        height: 100px;
-        animation: jump-and-move 10s infinite;
-        transform-style: preserve-3d;
-        }
-
-        .face {
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        border: 1px solid #ccc;
-        opacity: 0.9;
-        }
-
-        .front  { transform: translateZ(50px); }
-        .back   { transform: rotateY(180deg) translateZ(50px); }
-        .right  { transform: rotateY(90deg) translateZ(50px); }
-        .left   { transform: rotateY(-90deg) translateZ(50px); }
-        .top    { transform: rotateX(90deg) translateZ(50px); }
-        .bottom { transform: rotateX(-90deg) translateZ(50px); }
-  </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>This is the Fun Page!</h1>

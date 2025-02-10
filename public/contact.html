@@ -3,56 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact Me</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #537392;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            background: #a14343;
-            width: 80%;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        form, .contact-info {
-            display: flex;
-            flex-direction: column;
-        }
-        input, textarea {
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .back-button {
-            background-color: #493581;
-            color: rgb(255, 255, 255);
-            border: none;
-            cursor: pointer;
-            padding: 5px 5px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin-bottom: 20px; 
-            transition: background-color 0.3s;
-        }
-        .back-button:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
+    <link rel="stylesheet" href="mycss.css">
+    <script src="./script.js" defer></script>
 <body>
     <a href="/" class="back-button">Back to Home</a> 
-
     <div class="container">
         <h1>Let us contact you!</h1>
         <form action="#" method="post">
@@ -66,7 +20,7 @@
         <h1>Get in touch with us now!</h1>
         <div class="contact-info">
             <p>Tel: +47 399 888 30</p>
-            <p><a href="mailto:m.neweder@gmail.com">Send email</a></p>
+            <button id="sendMailButton" class="send-mail-button">Send Mail</button>
         </div>
     </div>
 </body>
