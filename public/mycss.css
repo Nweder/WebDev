@@ -160,7 +160,7 @@ body {
     background-color: #45a049;
     }
     .send-mail-button {
-        background-color: #5a80d6; /* Blue button */
+        background-color: #5a80d6; 
         color: white;
         padding: 10px 20px;
         font-size: 16px;
@@ -172,9 +172,21 @@ body {
         margin: 10px auto;
         text-align: center;
     }
-    
     .send-mail-button:hover {
-        background-color: #4b6bbf; /* Darker hover effect */
+        background-color: #4b6bbf; 
     }
-    
+    .back-button {
+        background-color: #5a80d6;
+        color: white;
+        font-size: 14px;
+        border-radius: 4px;
+        text-decoration: none; 
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        margin: 10px;
+    }
+    .back-button:hover {
+        background-color: #4b6bbf;
+    }
     
