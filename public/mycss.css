@@ -286,6 +286,23 @@ body {
     #sendMailButton:hover {
         background-color: #4b6bbf;
     }
+    .project-card {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 10px;
+        border-radius: 10px;
+        background: #222;
+        color: white;
+        text-align: center;
+        max-width: 300px;
+    }
+    
+    .project-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
         
     
     

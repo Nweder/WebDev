@@ -24,35 +24,23 @@ document.getElementById("back-button-my-projects").addEventListener("click", fun
     window.location.href = "../index.html"; 
 });
 
-document.getElementById("sendMailButton").addEventListener("click", async function() {
-    let userEmail = document.getElementById("userEmail").value;
-    let messageElement = document.getElementById("message");
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("http://localhost:5000/api/projects")
+        .then(response => response.json())
+        .then(data => {
+            const projectContainer = document.getElementById("projects-list");
+            projectContainer.innerHTML = ""; 
 
-    if (userEmail.trim() === "") {
-        messageElement.textContent = "Please enter your email before sending.";
-        messageElement.style.color = "red";
-        return;
-    }
-    try {
-        let response = await fetch("http://localhost:5000/api/email/send", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ userEmail })
-        });
-
-        let result = await response.json();
-
-        if (response.ok) {
-            messageElement.textContent = "Email sent successfully!";
-            messageElement.style.color = "green";
-        } else {
-            messageElement.textContent = "Failed to send email. Please try again.";
-            messageElement.style.color = "red";
-        }
-    } catch (error) {
-        messageElement.textContent = "Error connecting to server.";
-        messageElement.style.color = "red";
-        console.error("Error:", error);
-    }
+            data.forEach(project => {
+                projectContainer.innerHTML += `
+                    <div class="project-card">
+                        <img src="./assets/images/${project.image}" alt="${project.title}">
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                    </div>
+                `;
+            });
+        })
+        .catch(error => console.error("Error fetching projects:", error));
 });
 
