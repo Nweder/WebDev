@@ -30,7 +30,6 @@ app.MapGet("/weatherforecast", () =>
 
 app.Run();
 
-
 public class WeatherForecast
 {
     public DateOnly Date { get; set; }
