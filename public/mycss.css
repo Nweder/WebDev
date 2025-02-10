@@ -175,7 +175,7 @@ body {
     .send-mail-button:hover {
         background-color: #4b6bbf; 
     }
-    .back-button {
+    .back-button, .back-button-about-me {
         background-color: #5a80d6;
         color: white;
         font-size: 14px;
@@ -186,7 +186,8 @@ body {
         cursor: pointer;
         margin: 10px;
     }
-    .back-button:hover {
+    .back-button:hover, .back-button-about-me:hover {
         background-color: #4b6bbf;
     }
+    
     
