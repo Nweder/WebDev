@@ -1,3 +1,9 @@
+function toggleTheme() {
+    var body = document.body;
+    body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode');
+  }
+
 document.getElementById("sendMailButton").addEventListener("click", function() {
     window.location.href = "mailto:m.neweder@gmail.com?subject=Hello&body=I want to contact you!";
 });
